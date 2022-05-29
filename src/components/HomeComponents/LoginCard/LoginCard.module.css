@@ -1,0 +1,6 @@
+.loginCard__divWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 85vh;
+  }

@@ -1,0 +1,8 @@
+.card__divWrapper {
+    padding: 5vh 10px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    flex: 1;
+  }
+  

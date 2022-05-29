@@ -1,0 +1,32 @@
+.staticEffect {
+  width: 100%;
+  height: 320px;
+  background: url('../../../assets/images/tvStatic.jpg');
+  animation: animate .5s steps(10) infinite;
+}
+
+.staticEffect__wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.staticEffect__i {
+  margin: auto;
+}
+
+.staticEffect__i__play:hover {
+  color: #6610f2;
+  transform: scale(1.1);
+  transition: transform .2s;
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 100% 100%;
+  }
+}

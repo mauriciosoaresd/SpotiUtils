@@ -1,0 +1,22 @@
+.footerButtons__divWrapper {
+    width: fit-content;
+    margin: auto;
+}
+
+.footerButtons__divWrapper i {
+    font-size: 30px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.footerButtons__divWrapper i:hover {
+    transition: transform .2s;
+    border-radius: 5px;
+    color: #6610f2;
+    transform: scale(1.1);
+    background-color: white;
+}
+
+.footerButtons__divWrapper a {
+    margin: 0 15px;
+}

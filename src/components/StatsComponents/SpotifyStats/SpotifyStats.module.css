@@ -1,0 +1,20 @@
+.timeRangeButtons__divWrapper {
+    text-align: center;
+}
+
+.timeRangeButtons__divWrapper>* {
+    font-weight: bolder;
+}
+
+.timeRangeButton {
+    font-size: 28px;
+}
+
+.timeRangeButton:hover {
+    color: #6610f2;
+}
+
+
+.stats__divWrapper {
+    margin: 15px 0 0 0;
+}

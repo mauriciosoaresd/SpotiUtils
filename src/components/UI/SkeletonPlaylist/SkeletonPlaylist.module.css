@@ -1,0 +1,14 @@
+.skeletonText__title {
+    height: 30px;
+}
+
+.skeletonText__smallInfo {
+    height: 15px;
+    width: 75%;
+}
+
+@media (min-width: 768px) {
+    .skeletonContainer {
+        height: 180px !important;
+    }
+}

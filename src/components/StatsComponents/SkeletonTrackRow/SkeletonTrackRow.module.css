@@ -1,0 +1,9 @@
+.skeletonCell {
+    width: 45px !important;
+  }
+
+  .skeletonTableData {
+    padding: 18px;
+    margin: auto;
+    vertical-align: middle !important;
+  }
