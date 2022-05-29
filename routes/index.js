@@ -29,7 +29,6 @@ router.get('/refresh_token', async function (req, res) {
     if (req.user == null) {
         return res.json({"redirected":true})
     } else {
-        console.log('else')
         let token = refreshToken(req.user).then(() => usersCtrl.login(req.user))
         return res.json({ "JWT": await token })
     }

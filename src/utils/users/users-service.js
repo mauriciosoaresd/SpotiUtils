@@ -24,14 +24,11 @@ export async function signOut() {
     if (!token) return
     localStorage.removeItem('token')
     return
-
 }
 
 export async function checkToken(JWT) {
     if (JWT != null) return JWT.exp < Date.now() / 1000
     return false
-
-
 }
 
 export async function renewToken() {
