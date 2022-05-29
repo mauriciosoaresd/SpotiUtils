@@ -27,12 +27,11 @@ router.get('/auth/spotify/callback', passport.authenticate(
 
 router.get('/refresh_token', async function (req, res) {
     if (req.user == null) {
-        res.json({"redirected":true})
+        return res.json({"redirected":true})
     } else {
         console.log('else')
         let token = refreshToken(req.user).then(() => usersCtrl.login(req.user))
-
-        res.json({ "JWT": await token })
+        return res.json({ "JWT": await token })
     }
 
 })

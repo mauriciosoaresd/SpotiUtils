@@ -42,9 +42,7 @@ export async function renewToken() {
                 signOut();
                 window.location = 'http://localhost:3001/logout'
             } else {
-                console.log(res.data)
-                let JWT = await res.data.json()
-                    .then(json => json.JWT)
+                let JWT = res.data.JWT
                 localStorage.setItem('token', JWT)
                 return ((JSON.parse(Buffer.from(JWT.split('.')[1], 'base64').toString('binary'))).user.Stoken)
             }

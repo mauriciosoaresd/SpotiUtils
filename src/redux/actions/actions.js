@@ -1,7 +1,5 @@
 import * as SpotifyApi from "../../utils/spotify/spotify-api";
 import { getToken, signIn, signOut, checkToken, renewToken } from '../../utils/users/users-service';
-import { Buffer } from 'buffer';
-
 
 export const requestLogin = (token) => {
     const userData = signIn(token)
@@ -18,24 +16,7 @@ export const requestLogout = () => {
 }
 
 export const refreshToken = async () => {
-    let JWtoken = await fetch('http://localhost:3001/refresh_token', {
-        method: 'GET', headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-        }
-    })
-        .then(async (res) => {
-            console.log(res.JWT)
-            if (res.data.redirected) {
-                requestLogout();
-                window.location = '/'
-                // *
-            } else {
-                let JWT = await res.data.json().then(x => x.JWT)
-                localStorage.setItem('token', JWT)
-                return ((JSON.parse(Buffer.from(JWT.split('.')[1], 'base64').toString('binary'))).user.Stoken)
-            }
-        })
+    let JWtoken = renewToken()
 
     return async (dispatch) => {
         dispatch({ type: "REFRESH_TOKEN", payload: JWtoken })
@@ -50,6 +31,7 @@ export const toggleLoading = (data) => {
 
 export const getMyProfile = () => {
     const JWT = getToken()
+    console.log('tentou pegar perfil')
 
     return async (dispatch) => {
         if (await checkToken(JWT)) {
