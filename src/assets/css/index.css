@@ -21,11 +21,6 @@ body {
   flex-direction: column;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .navbar {
   color: white;
   font-size: 1.3rem;
@@ -35,10 +30,6 @@ code {
 
 .navbar-brand {
   text-align: center;
-}
-
-.dropdown-margin {
-  margin-left: auto;
 }
 
 a {
@@ -89,16 +80,6 @@ footer {
   width: 100%;
 }
 
-.randomSongDiv {
-  margin: auto 0;
-  padding-bottom: 50px;
-}
-
-.thCover {
-  width: 0px !important;
-}
-
-
 td {
   vertical-align: middle !important;
 }
@@ -117,11 +98,6 @@ td {
 
 .timeRangeButtons__active {
   border-bottom: 3px solid #6610f2;
-}
-
-.tracksTable {
-  width: fit-content;
-  margin: 15px auto 0 auto;
 }
 
 .table {
@@ -215,9 +191,6 @@ thead {
   justify-content: center;
   margin-top: 30px;
 }
-
-
-
 
 @keyframes skeleton-loading {
   0% {

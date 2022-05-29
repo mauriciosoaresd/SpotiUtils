@@ -31,7 +31,6 @@ export const toggleLoading = (data) => {
 
 export const getMyProfile = () => {
     const JWT = getToken()
-    console.log('tentou pegar perfil')
 
     return async (dispatch) => {
         if (await checkToken(JWT)) {
