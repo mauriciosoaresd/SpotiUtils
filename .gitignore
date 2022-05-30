@@ -24,3 +24,4 @@ yarn-error.log*
 reduxExplain.txt
 .env
 accountReducer.js
+src/redux/reducers/accountReducer.js
