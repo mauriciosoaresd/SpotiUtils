@@ -23,6 +23,7 @@ import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer'
 import ConvertPlaylist from '../../components/ConversionComponents/ConvertPlaylist/ConvertPlaylist';
 import ConvertSelection from '../../components/ConversionComponents/ConvertSelection/ConvertSelection';
 import BackButton from '../../components/UI/BackButton/BackButton'
+import PlaylistsPage from '../PlaylistsPage/PlaylistsPage'
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -33,6 +34,8 @@ function App() {
   useEffect(() => {
     user.loggedIn && getMyProfile()
   }, [])
+
+  // FIX REFRESH BUTTON, RANDOM PLAYLISTS
 
 
   return (
@@ -57,13 +60,11 @@ function App() {
                 {/* trocar camelcase por hifen */}
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/" element={<CardsDiv />} />
-                <Route path="/playlistSelect" element={<SelectPlaylist />} />
-                <Route path="/convert-playlist" element={<ConvertPlaylist />} />
+                <Route path="/convert-playlist" element={<PlaylistsPage page={"conversion"}/>} />
+                <Route path="/playlist-select" element={<PlaylistsPage page={"random"}/> } />
                 <Route path="/convert-playlist/:id" element={<ConvertSelection />}/>
-                <Route path="/randomSong/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/playlistSelect" />} />
+                <Route path="/random-song/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/playlist-select" />} />
                 <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer/> : <Navigate to="/convert-playlist"/>}/>
-
-
                 <Route path="/videoplayer" element={user.selectedSong != undefined ? < VideoPlayer /> : <Navigate to="/mystats"/>} />
                 <Route path="/mystats" element={<SpotifyStats />} />
               </>

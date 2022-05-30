@@ -22,7 +22,7 @@ const CardsDiv = () => {
             </div>
 
             <div className="card" style={{ width: 23 + 'rem' }}>
-                <Link to={user.loggedIn ? '/playlistSelect' : '/'}>
+                <Link to={user.loggedIn ? '/playlist-select' : '/'}>
                     <img src={require('../../../assets/images/concert.jpg')} className="card-img-top" alt="..."></img>
                     <div className="card-body">
                         <h5 className="card-title text-center">Get a random song</h5>
