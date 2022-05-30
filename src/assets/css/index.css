@@ -115,11 +115,15 @@ thead {
   border-bottom: solid 3px rgba(255, 255, 255, 0.274) !important;
 }
 
-.icon__i {
-  font-size: 25px;
+.bottomButtons {
   bottom: 50px;
   position: fixed;
-  z-index: 1030;
+}
+
+.icon__i {
+  font-size: 25px;
+  /* bottom: 50px;
+  position: fixed; */
   padding: 6px;
   border-radius: 50%;
   color: white;

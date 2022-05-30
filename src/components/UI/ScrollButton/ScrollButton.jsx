@@ -16,7 +16,7 @@ const ScrollButton = () => {
 
     return (
     <>
-        {display &&<i onClick={() => goToTop()} className={`icon__i ${styles.goTopIcon__i} fas fa-arrow-up`}></i> }
+        {display &&<i onClick={() => goToTop()} className={`icon__i ${styles.goTopIcon__i} bottomButtons fas fa-arrow-up`}></i> }
     </>
 
     )

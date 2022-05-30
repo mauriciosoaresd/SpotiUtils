@@ -22,6 +22,7 @@ import AutoScrollToTop from '../../components/UI/AutoScrollToTop/AutoScrollToTop
 import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer'
 import ConvertPlaylist from '../../components/ConversionComponents/ConvertPlaylist/ConvertPlaylist';
 import ConvertSelection from '../../components/ConversionComponents/ConvertSelection/ConvertSelection';
+import BackButton from '../../components/UI/BackButton/BackButton'
 
 function App() {
   const user = useSelector((state) => state.user);
@@ -42,6 +43,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <BackButton />
       <main className="text-light" id="main">
 
         {user.loggedIn ?
