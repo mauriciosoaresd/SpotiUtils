@@ -26,14 +26,9 @@ import BackButton from '../../components/UI/BackButton/BackButton'
 
 function App() {
   const user = useSelector((state) => state.user);
-
-
   const dispatch = useDispatch();
   const { getMyProfile } = bindActionCreators(actionCreators, dispatch)
 
-  // cleanup ao sair do stats*, videoplayer*, randomsong <- só da um bizu
-  // botão back <-
-  // CSS BE(m não)
 
   useEffect(() => {
     user.loggedIn && getMyProfile()

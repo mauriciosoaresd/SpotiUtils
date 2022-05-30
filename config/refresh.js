@@ -29,7 +29,6 @@ async function sendRefreshTokenRequest(refreshToken = null, link = "https://acco
     let params = {
         'grant_type': 'refresh_token',
         'refresh_token': refreshToken,
-        // 'scope': ['playlist-read-private', 'user-library-read']
         scope: ['user-top-read', 'playlist-read-private' ,'user-library-read', 'playlist-modify-public']
         
     }

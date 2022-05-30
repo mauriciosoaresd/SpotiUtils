@@ -11,8 +11,6 @@ import VideoLoadingStatic from '../VideoLoadingStatic/VideoLoadingStatic'
 import { addTracksToPlaylist, createTrackList, searchSong } from '../../../utils/youtube/youtube-utility'
 
 import styles from './VideoPlayer.module.css'
-//TERMINAR O PLAYER, EDITAR O RANDOM SONG P/ DIMINUIR A PARADA, COMPONENTIZAR ETC
-
 
 const VideoPlayer = () => {
     const selectedPlaylist = useSelector((state) => state.user.selectedPlaylist);
