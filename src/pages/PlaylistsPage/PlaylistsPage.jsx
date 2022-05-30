@@ -23,9 +23,11 @@ const PlaylistsPage = ({ page }) => {
         if (playlists.items.length === 0)
             if (page == "random") {
                 getLibrary().then(() => getAllPlaylists(playlists.items.length, 5))
+
             } else {
                 getAllPlaylists(playlists.items.length, 5)
             }
+
         return () => { resetAllPlaylists() }
     }, [])
 
@@ -69,18 +71,23 @@ const PlaylistsPage = ({ page }) => {
 
             {
                 (playlists.items.length > 0) && !loading && (playlists.items.length < (playlists.total)) &&
-                <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 1)} skeletonComponent={<SkeletonPlaylist />} />}
-
-            {playlists.items.length < (playlists.total) && <>
-                <SkeletonPlaylist />
-            </>
+                <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 1)} skeletonComponent={<SkeletonPlaylist />} />
             }
-            {playlists.items.length === 0 && <>
-                <SkeletonPlaylist />
-                <SkeletonPlaylist />
-                <SkeletonPlaylist />
-                <SkeletonPlaylist />
-            </>}
+
+            {playlists.items.length < (playlists.total) &&
+                <>
+                    <SkeletonPlaylist />
+                </>
+            }
+
+            {playlists.items.length === 0 &&
+                <>
+                    <SkeletonPlaylist />
+                    <SkeletonPlaylist />
+                    <SkeletonPlaylist />
+                    <SkeletonPlaylist />
+                </>
+            }
 
             <RefreshButton refreshFunc={refreshPlaylists} />
 

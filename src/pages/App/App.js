@@ -16,11 +16,9 @@ import LoginCard from '../../components/HomeComponents/LoginCard/LoginCard'
 import CardsDiv from '../../components/HomeComponents/CardsDiv/CardsDiv'
 import Footer from '../../components/UI/Footer/Footer'
 import ScrollButton from '../../components/UI/ScrollButton/ScrollButton'
-import SelectPlaylist from '../../components/RandomSongComponents/SelectPlaylist/SelectPlaylist'
 import SpotifyStats from '../../components/StatsComponents/SpotifyStats/SpotifyStats'
 import AutoScrollToTop from '../../components/UI/AutoScrollToTop/AutoScrollToTop'
 import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer'
-import ConvertPlaylist from '../../components/ConversionComponents/ConvertPlaylist/ConvertPlaylist';
 import ConvertSelection from '../../components/ConversionComponents/ConvertSelection/ConvertSelection';
 import BackButton from '../../components/UI/BackButton/BackButton'
 import PlaylistsPage from '../PlaylistsPage/PlaylistsPage'
@@ -34,9 +32,6 @@ function App() {
   useEffect(() => {
     user.loggedIn && getMyProfile()
   }, [])
-
-  // FIX REFRESH BUTTON, RANDOM PLAYLISTS
-
 
   return (
     <div className="App">
@@ -60,8 +55,8 @@ function App() {
                 {/* trocar camelcase por hifen */}
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/" element={<CardsDiv />} />
-                <Route path="/convert-playlist" element={<PlaylistsPage page={"conversion"}/>} />
-                <Route path="/playlist-select" element={<PlaylistsPage page={"random"}/> } />
+                <Route path="/convert-playlist" element={<PlaylistsPage x={"conversion"}/>} />
+                <Route path="/playlist-select" element={<PlaylistsPage x={"random"}/> } />
                 <Route path="/convert-playlist/:id" element={<ConvertSelection />}/>
                 <Route path="/random-song/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/playlist-select" />} />
                 <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer/> : <Navigate to="/convert-playlist"/>}/>
