@@ -1,3 +1,5 @@
 .refreshIcon__i {
-    right: 55px;
+    position: fixed;
+    right: 15px !important;
+    bottom: 60px;
 }

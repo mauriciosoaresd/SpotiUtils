@@ -1,9 +1,12 @@
 .backIcon__i {
-    font-size: 25px;
-    margin: 105px 0 0 20px;
-    padding: 6px;
-    border-radius: 50%;
-    width: 35px;
-    color: white;
-    cursor: pointer;
+    margin-left: 15px;
+    position: fixed;
+    bottom: 60px;
+    z-index: 1030;
+}
+
+@media (min-width: 768px) {
+    .backIcon__i {
+        top: 100px;
+    }
 }

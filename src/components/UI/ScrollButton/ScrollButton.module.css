@@ -1,3 +1,5 @@
 .goTopIcon__i {
-    right: 15px;
+  position: fixed;
+    right: 60px;
+    bottom: 60px;
   }

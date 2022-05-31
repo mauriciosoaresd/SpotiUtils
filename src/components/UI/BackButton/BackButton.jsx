@@ -10,7 +10,7 @@ const BackButton = () => {
     return (
         <>
             {location.pathname != "/" ?
-                <i onClick={() => navigate(-1)} className={`${styles.backIcon__i} icon__i fixed-top fas fa-arrow-left`}></i>
+                <i onClick={() => navigate(-1)} className={`${styles.backIcon__i} icon__i fas fa-arrow-left`}></i>
                 : ''
             }
         </>

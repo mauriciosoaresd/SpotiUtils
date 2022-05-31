@@ -115,26 +115,24 @@ thead {
   border-bottom: solid 3px rgba(255, 255, 255, 0.274) !important;
 }
 
-.bottomButtons {
+/* .bottomButtons {
   bottom: 50px;
   position: fixed;
-}
+} */
 
 .icon__i {
+  background-color: white;
+  color: #6610F4;
   font-size: 25px;
-  /* bottom: 50px;
-  position: fixed; */
   padding: 6px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  color: white;
   cursor: pointer;
 }
 
-.icon__i:hover {
-  background-color: white;
-  color: #6610F4;
-  transform: scale(1.1);
-  transition: transform .2s;
+.fixed-bottom {
+  bottom: 10px !important;
 }
 
 .conversionTrack__div {
@@ -207,6 +205,19 @@ thead {
 }
 
 @media (min-width: 768px) {
+  .icon__i {
+    background-color: transparent;
+    color: white;
+    /* cursor: pointer; */
+  }
+  .icon__i:hover {
+    background-color: white;
+    color: #6610F4;
+    transform: scale(1.1);
+    transition: transform .2s;
+  }
+  
+
 
   .table {
     width: 70% !important;
