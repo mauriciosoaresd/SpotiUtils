@@ -54,6 +54,7 @@ const PlaylistsPage = ({ page }) => {
                 page == "random" ?
                     <>
                         <h1 className='pageTitle__h1'>Select a playlist to convert</h1>
+
                         {library && <PlaylistCard idx={0} data={library} hist={`random-song`} />}
                         {playlists && playlists.items.map((playlist, idx) => {
                             return <PlaylistCard idx={idx} data={playlist} hist={`random-song`} />
