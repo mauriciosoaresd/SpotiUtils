@@ -55,13 +55,13 @@ function App() {
                 {/* trocar camelcase por hifen */}
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/" element={<CardsDiv />} />
-                <Route path="/convert-playlist" element={<PlaylistsPage x={"conversion"}/>} />
-                <Route path="/playlist-select" element={<PlaylistsPage x={"random"}/> } />
+                <Route path="/convert-playlists" element={<PlaylistsPage page={"conversion"}/>} />
+                <Route path="/random-playlists" element={<PlaylistsPage page={"random"}/> } />
                 <Route path="/convert-playlist/:id" element={<ConvertSelection />}/>
-                <Route path="/random-song/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/playlist-select" />} />
-                <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer/> : <Navigate to="/convert-playlist"/>}/>
-                <Route path="/videoplayer" element={user.selectedSong != undefined ? < VideoPlayer /> : <Navigate to="/mystats"/>} />
-                <Route path="/mystats" element={<SpotifyStats />} />
+                <Route path="/random-song/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/random-playlists" />} />
+                <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer/> : <Navigate to="/convert-playlists"/>}/>
+                <Route path="/video-player" element={user.selectedSong != undefined ? < VideoPlayer /> : <Navigate to="/my-stats"/>} />
+                <Route path="/my-stats" element={<SpotifyStats />} />
               </>
               :
               <>

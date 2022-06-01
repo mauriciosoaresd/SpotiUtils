@@ -24,7 +24,7 @@ const TracksRow = ({ track, id }) => {
         <tr onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
             {onHover ?
                 <td className="d-none d-sm-table-cell">
-                    <Link to="/videoplayer">
+                    <Link to="/video-player">
                         <i
                             onClick={() => setSongToPlay({ artists, trackName: track.name })}
                             className={`fas fa-play-circle ${styles.playIcon_i}`}>
