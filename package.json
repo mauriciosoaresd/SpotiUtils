@@ -1,6 +1,5 @@
 {
   "name": "study-redux-app",
-  "homepage": "https://mauriciosoaresd.github.io/SpotiUtils",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,9 +47,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -75,7 +72,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauriciosoaresd/SpotiUtils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mauriciosoaresd/SpotiUtils/issues"
   }
 }
