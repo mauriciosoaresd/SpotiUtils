@@ -1,7 +1,6 @@
 {
   "name": "study-redux-app",
   "version": "0.1.0",
-  "homepage": "https://mauriciosoaresd.github.io/SpotiUtils",
   "private": true,
   "dependencies": {
     "@popperjs/core": "^2.11.2",
@@ -45,12 +44,10 @@
     "youtubei.js": "^1.4.2-d.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node ./server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -82,7 +79,6 @@
   "bugs": {
     "url": "https://github.com/mauriciosoaresd/SpotiUtils/issues"
   },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
-  }
+  "homepage": "https://github.com/mauriciosoaresd/SpotiUtils#readme",
+  "devDependencies": {}
 }
