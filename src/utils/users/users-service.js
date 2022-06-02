@@ -33,11 +33,11 @@ export async function checkToken(JWT) {
 
 export async function renewToken() {
     // mudar link
-    let JWtoken = sendAxiosRequest(`${process.env.REACT_APP_DOMAIN}/refresh_token`)
+    let JWtoken = sendAxiosRequest(`${process.env.DOMAIN}/refresh_token`)
         .then(async (res) => {
             if (res.data.redirected) {
                 signOut();
-                window.location = `${process.env.REACT_APP_DOMAIN}/logout`
+                window.location = `${process.env.DOMAIN}/logout`
             } else {
                 let JWT = res.data.JWT
                 localStorage.setItem('token', JWT)

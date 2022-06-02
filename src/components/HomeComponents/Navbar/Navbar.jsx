@@ -8,7 +8,7 @@ const Navbar = () => {
     const user = useSelector((state) => state.user);
 
     const handleLogin = () => {
-        window.location = 'http://localhost:3001/auth/spotify'
+        window.location = `${process.env.DOMAIN}/auth/spotify`
     }
 
     useEffect(() => {
