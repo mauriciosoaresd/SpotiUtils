@@ -39,11 +39,11 @@ const PlaylistsPage = ({ page }) => {
         if (page == "random") {
             resetAllPlaylists()
                 .then(() => getLibrary())
-                .then(() => getAllPlaylists(playlists.items.length, 5))
+                .then(() => getAllPlaylists(playlists.items.length, 50))
                 .then(() => toggleLoading(false))
         } else {
             resetAllPlaylists()
-                .then(() => getAllPlaylists(0, 5))
+                .then(() => getAllPlaylists(0, 50))
                 .then(() => toggleLoading(false))
         }
     }
@@ -72,7 +72,7 @@ const PlaylistsPage = ({ page }) => {
 
             {
                 (playlists.items.length > 0) && !loading && (playlists.items.length < (playlists.total)) &&
-                <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 1)} skeletonComponent={<SkeletonPlaylist />} />
+                <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 50)} skeletonComponent={<SkeletonPlaylist />} />
             }
 
             {playlists.items.length < (playlists.total) &&
