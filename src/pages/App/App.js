@@ -23,6 +23,11 @@ import ConvertSelection from '../../components/ConversionComponents/ConvertSelec
 import BackButton from '../../components/UI/BackButton/BackButton'
 import PlaylistsPage from '../PlaylistsPage/PlaylistsPage'
 
+/* TO FIX */
+// - INFINITE LOADING NO MOBILE
+// - BOTÕES NO MOBILE
+
+
 function App() {
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();

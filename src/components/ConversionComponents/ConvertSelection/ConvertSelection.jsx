@@ -131,10 +131,7 @@ const ConvertSelection = () => {
             }
 
             {(playlist.items.length > 0) && !loading && (playlist.items.length - 1 < (playlist.total)) && <>
-                <InfiniteScroll fetchMore={() => getPlaylistToConvert(id, playlist.items.length - 1, 10)} skeletonComponent={<SkeletonConversionTrack />} />
-                <SkeletonConversionTrack />
-                <SkeletonConversionTrack />
-                <SkeletonConversionTrack />
+                <InfiniteScroll fetchMore={() => getPlaylistToConvert(id, playlist.items.length - 1, 50)} skeletonComponent={<SkeletonConversionTrack />} />
             </>}
 
             {list.length == 0 && <>
