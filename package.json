@@ -79,6 +79,6 @@
   "bugs": {
     "url": "https://github.com/mauriciosoaresd/SpotiUtils/issues"
   },
-  "homepage": "https://spotiutils.herokuapp.com/",
-  "devDependencies": {}
+  "devDependencies": {},
+  "homepage": "https://spotiutils.herokuapp.com/"
 }

@@ -35,7 +35,7 @@ const TracksRow = ({ track, id }) => {
                 :
                 <td className="d-none d-sm-table-cell text-center">{id + 1}</td>
             }
-            <td><img src={track.album.images[2].url} alt="Album cover" /></td>
+            <td><img src={track.album.images[0].url} alt="Album cover" width={`61px`}/></td>
             <td>{artists}</td>
             <td>{track.name}</td>
             <td className="d-none d-md-table-cell">{track.album.name}</td>

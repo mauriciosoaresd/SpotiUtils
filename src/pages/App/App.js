@@ -15,17 +15,11 @@ import Logout from '../../components/HomeComponents/Logout/Logout'
 import LoginCard from '../../components/HomeComponents/LoginCard/LoginCard'
 import CardsDiv from '../../components/HomeComponents/CardsDiv/CardsDiv'
 import Footer from '../../components/UI/Footer/Footer'
-import ScrollButton from '../../components/UI/ScrollButton/ScrollButton'
 import SpotifyStats from '../../components/StatsComponents/SpotifyStats/SpotifyStats'
 import AutoScrollToTop from '../../components/UI/AutoScrollToTop/AutoScrollToTop'
 import VideoPlayer from '../../components/UI/VideoPlayer/VideoPlayer'
-import ConvertSelection from '../../components/ConversionComponents/ConvertSelection/ConvertSelection';
-import BackButton from '../../components/UI/BackButton/BackButton'
+import ConvertSelection from '../../components/ConversionComponents/ConvertSelection/ConvertSelection'
 import PlaylistsPage from '../PlaylistsPage/PlaylistsPage'
-
-/* TO FIX */
-// - INFINITE LOADING NO MOBILE
-// - BOTÕES NO MOBILE
 
 
 function App() {
@@ -41,7 +35,6 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <BackButton />
       <main className="text-light" id="main">
 
         {user.loggedIn ?
@@ -60,12 +53,12 @@ function App() {
                 {/* trocar camelcase por hifen */}
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/" element={<CardsDiv />} />
-                <Route path="/convert-playlists" element={<PlaylistsPage page={"conversion"}/>} />
-                <Route path="/random-playlists" element={<PlaylistsPage page={"random"}/> } />
-                <Route path="/convert-playlist/:id" element={<ConvertSelection />}/>
+                <Route path="/convert-playlists" element={<PlaylistsPage page={"conversion"} />} />
+                <Route path="/random-playlists" element={<PlaylistsPage page={"random"} />} />
+                <Route path="/convert-playlist/:id" element={<ConvertSelection />} />
                 <Route path="/random-song/:id" element={user.selectedPlaylist != undefined ? <VideoPlayer /> : <Navigate to="/random-playlists" />} />
-                <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer/> : <Navigate to="/convert-playlists"/>}/>
-                <Route path="/video-player" element={user.selectedSong != undefined ? < VideoPlayer /> : <Navigate to="/my-stats"/>} />
+                <Route path="/converted-playlist-display" element={user.convertSongs != undefined ? <VideoPlayer /> : <Navigate to="/convert-playlists" />} />
+                <Route path="/video-player" element={user.selectedSong != undefined ? < VideoPlayer /> : <Navigate to="/my-stats" />} />
                 <Route path="/my-stats" element={<SpotifyStats />} />
               </>
               :
@@ -75,7 +68,6 @@ function App() {
             }
           </Routes>
         </AutoScrollToTop>
-        <ScrollButton />
       </main>
       <Footer />
     </div>

@@ -6,10 +6,11 @@ import { bindActionCreators } from "redux"
 import { actionCreators } from '../../redux/actions'
 
 import SkeletonPlaylist from '../../components/UI/SkeletonPlaylist/SkeletonPlaylist'
-import styles from './PlaylistsPage.module.css'
 import InfiniteScroll from '../../components/UI/InfiniteScroll/InfiniteScroll'
 import RefreshButton from '../../components/UI/RefreshButton/RefreshButton'
 import PlaylistCard from '../../components/UI/PlaylistCard/PlaylistCard'
+import BackButton from '../../components/UI/BackButton/BackButton'
+import styles from './PlaylistsPage.module.css'
 
 const PlaylistsPage = ({ page }) => {
     const playlists = useSelector((state) => state.user.playlists)
@@ -22,10 +23,10 @@ const PlaylistsPage = ({ page }) => {
     useEffect(() => {
         if (playlists.items.length === 0)
             if (page == "random") {
-                getLibrary().then(() => getAllPlaylists(playlists.items.length, 5))
+                getLibrary().then(() => getAllPlaylists(playlists.items.length, 50))
 
             } else {
-                getAllPlaylists(playlists.items.length, 5)
+                getAllPlaylists(playlists.items.length, 50)
             }
 
         return () => { resetAllPlaylists() }
@@ -53,15 +54,16 @@ const PlaylistsPage = ({ page }) => {
             {
                 page == "random" ?
                     <>
-                        <h1 className='pageTitle__h1'>Select a playlist to convert</h1>
-
+                        <h1 className='pageTitle__h1'>Select a playlist to get a random track</h1>
+                        <BackButton path="/" />
                         {library && <PlaylistCard idx={0} data={library} hist={`random-song`} />}
                         {playlists && playlists.items.map((playlist, idx) => {
                             return <PlaylistCard idx={idx} data={playlist} hist={`random-song`} />
                         })}
                     </> :
                     <>
-                        <h1 className='pageTitle__h1'>Select a playlist to get a random track</h1>
+                        <h1 className='pageTitle__h1'>Select a playlist to convert</h1>
+                        <BackButton path="/" />
                         {playlists && playlists.items.map((playlist, idx) => {
                             return <PlaylistCard idx={idx} data={playlist} hist={`convert-playlist`} />
                         })}
@@ -90,7 +92,10 @@ const PlaylistsPage = ({ page }) => {
                 </>
             }
 
-            <RefreshButton refreshFunc={refreshPlaylists} />
+            <div className={`playlistsButtons__divWrapper`}>
+                <RefreshButton refreshFunc={refreshPlaylists} />
+            </div>
+
 
         </div>
     )

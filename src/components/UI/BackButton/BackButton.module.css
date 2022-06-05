@@ -1,4 +1,4 @@
-.backIcon__i {
+/* .backIcon__i {
     margin-left: 15px;
     position: fixed;
     bottom: 60px;
@@ -9,4 +9,17 @@
     .backIcon__i {
         top: 100px;
     }
+} */
+.backIcon__divWrapper {    
+    position: sticky;
+    margin-left: 20px;
+    top: 72px;
+    z-index: 1030;
+    height: 35px;
+}
+
+.backIcon__i {
+    /* position: position;
+    top: 66px;
+    z-index: 1030; */
 }

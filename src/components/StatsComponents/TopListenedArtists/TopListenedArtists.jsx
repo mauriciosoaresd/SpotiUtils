@@ -1,10 +1,12 @@
 import React from "react";
+import BackButton from "../../UI/BackButton/BackButton";
 import TopListenedArtistsSkeleton from "../TopListenedArtistsSkeleton/TopListenedArtistsSkeleton";
 
 const TopListenedArtists = ({ timeRange, artists }) => {
     return (
         <>
             <h1 className={`pageTitle__h1`}>Your most listened artists</h1>
+            <BackButton path="/" />
             {artists.hasOwnProperty(`${timeRange}`) && artists[`${timeRange}`].items.map((artist, idx) =>
 
                 <div className="card" style={{ maxWidth: 540 + 'px' }}>

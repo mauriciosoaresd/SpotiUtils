@@ -17,16 +17,23 @@
 
 .conversionButtonsContainer_divWrapper {
     display: flex;
-    justify-content: center;
+    position: sticky;
+    flex-direction: column;
+    /* justify-content: center; */
     margin: 0 auto;
-    position: fixed;
-    bottom: 65px;
-    right: 0;
-    left: 0;
+    bottom: 10px;
+    /* right: 0;
+    left: 0; */
+    align-items: center;
+    width: fit-content;
 }
+.conversionButtonsContainer_divWrapper > a {
+    width: fit-content;
+}
+.conversionButtonsContainer_divWrapper > * {
+    /* margin: 10px auto; */
+    margin: 4px 10px;
 
-.conversionButtonsContainer_divWrapper>* {
-    margin: 0 12px;
 }
 
 
@@ -38,5 +45,13 @@
     .conversionButtons_div {
         /* width: 70% !important; */
         width: max-content !important
+    }
+    .conversionButtonsContainer_divWrapper {
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+    }
+    .conversionButtonsContainer_divWrapper > * {
+        /* margin: 10px 20px; */
     }
 }

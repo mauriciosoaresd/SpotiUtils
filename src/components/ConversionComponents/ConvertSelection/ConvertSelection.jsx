@@ -14,6 +14,8 @@ import SkeletonConversionTrack from '../SkeletonConversionTrack/SkeletonConversi
 import CreateYoutubePlaylistButton from '../CreateYoutubePlaylistButton/CreateYoutubePlaylistButton'
 
 import styles from './ConvertSelection.module.css'
+import BackButton from '../../UI/BackButton/BackButton'
+import ScrollButton from '../../UI/ScrollButton/ScrollButton'
 
 const ConvertSelection = () => {
     let { id } = useParams();
@@ -107,6 +109,8 @@ const ConvertSelection = () => {
     return (
         <div className={`${styles.conversionContainer}`}>
             <h1 className='pageTitle__h1'>Select tracks to convert</h1>
+            <BackButton path="/convert-playlists" />
+
             <div className={`conversionTable_divHeader ${styles.conversionTable_divHeader}`}>
                 <div className="conversionTrack__imgWrapper">
                     <div width={64 + "px"}></div>
@@ -151,6 +155,7 @@ const ConvertSelection = () => {
 
             {list.length > 0 &&
                 <div className={`${styles.conversionButtonsContainer_divWrapper}`}>
+                        <ScrollButton />
                     {selectedTotal > 0 && <CreateYoutubePlaylistButton sendSelected={sendSelected} />}
                     <SelectAllConvertButton toggleAll={toggleAll} totalSelected={selectedTotal} list={list.length} />
                 </div>

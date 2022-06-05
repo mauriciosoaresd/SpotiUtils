@@ -50,7 +50,7 @@ main {
   flex-direction: column;
   min-height: 100% !important;
   margin-top: 66px;
-  margin-bottom: 40px;
+  margin-bottom: 15px;
 }
 
 
@@ -121,10 +121,11 @@ thead {
 } */
 
 .icon__i {
+  text-align: center;
   background-color: white;
   color: #6610F4;
   font-size: 25px;
-  padding: 6px;
+  padding: 5px;
   width: 35px;
   height: 35px;
   border-radius: 50%;
@@ -192,6 +193,14 @@ thead {
   display: flex;
   justify-content: center;
   margin-top: 30px;
+}
+
+
+.playlistsButtons__divWrapper {
+  position: sticky;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
 }
 
 @keyframes skeleton-loading {

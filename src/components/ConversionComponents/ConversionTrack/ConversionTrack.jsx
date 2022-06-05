@@ -4,7 +4,8 @@ const ConversionTrack = ({ song, selected }) => {
     return (
         <div className={`conversionTrack__div ${selected && 'purpleBackground'}`} >
             <div className="conversionTrack__imgWrapper">
-                <img src={song.album.images[2].url} alt="" width={64 + "px"} />
+                {/* <img src={song.album.images[2].url} alt="" width={64 + "px"} /> */}
+                <img src={song.album.images[0].url} alt="" width={64 + "px"} />
             </div>
 
             <div>

@@ -67,7 +67,10 @@ const SpotifyStats = () => {
 
             </div>
 
-            <RefreshButton refreshFunc={refreshStats} />
+            <div className={`playlistsButtons__divWrapper`}>
+                <RefreshButton refreshFunc={refreshStats} />
+            </div>
+
         </>
 
     )
