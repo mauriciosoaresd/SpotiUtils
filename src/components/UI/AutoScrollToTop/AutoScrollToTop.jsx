@@ -4,7 +4,13 @@ import { useLocation } from "react-router";
 const AutoScrollToTop = (props) => {
   const location = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      })
+    }, 200)
+
   }, [location]);
 
   return <>{props.children}</>

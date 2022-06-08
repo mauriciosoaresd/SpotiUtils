@@ -1,10 +1,8 @@
 import React from 'react'
 
-import styles from './RefreshButton.module.css'
-
 const RefreshButton = ({ refreshFunc }) => {
     return (
-        <i onClick={() => refreshFunc()} className={`${styles.refreshIcon__i} icon__i fas fa-sync-alt`}></i>
+        <i onClick={() => refreshFunc()} className={`icon__i fas fa-sync-alt`}></i>
     )
 }
 

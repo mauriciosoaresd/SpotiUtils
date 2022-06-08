@@ -1,5 +1,4 @@
 import React from 'react'
-import BackButton from '../../UI/BackButton/BackButton';
 
 import SkeletonListenedTracks from "../SkeletonListenedTracks/SkeletonListenedTracks";
 import TracksRow from '../TracksRow/TracksRow'
@@ -9,7 +8,6 @@ import styles from './TopListenedTracks.module.css'
 const TopListenedTracks = ({ timeRange, tracks }) => {
     return (
         <><h1 className={`pageTitle__h1`}>Your most listened tracks</h1>
-        <BackButton path="/" />
             <table className="table">
                 <thead>
                     <tr>

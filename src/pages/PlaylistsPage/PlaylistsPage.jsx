@@ -7,10 +7,12 @@ import { actionCreators } from '../../redux/actions'
 
 import SkeletonPlaylist from '../../components/UI/SkeletonPlaylist/SkeletonPlaylist'
 import InfiniteScroll from '../../components/UI/InfiniteScroll/InfiniteScroll'
+import ScrollButton from '../../components/UI/ScrollButton/ScrollButton'
 import RefreshButton from '../../components/UI/RefreshButton/RefreshButton'
 import PlaylistCard from '../../components/UI/PlaylistCard/PlaylistCard'
-import BackButton from '../../components/UI/BackButton/BackButton'
+
 import styles from './PlaylistsPage.module.css'
+import BackButton from '../../components/UI/BackButton/BackButton'
 
 const PlaylistsPage = ({ page }) => {
     const playlists = useSelector((state) => state.user.playlists)
@@ -50,54 +52,60 @@ const PlaylistsPage = ({ page }) => {
     }
 
     return (
-        <div className={`${styles.playlistsPage__divWrapper}`}>
-            {
-                page == "random" ?
+        <>
+            <h1 className='pageTitle__h1'>
+                {page == "random" ?
+                    'Select a playlist to get a random track' :
+                    'Select a playlist to convert'
+                }</h1>
+                <BackButton path='/'/>
+            <div className={`${styles.playlistsPage__divWrapper}`}>
+                {
+                    page == "random" ?
+                        <>
+                            {library && <PlaylistCard idx={0} data={library} hist={`random-song`} />}
+                            {playlists && playlists.items.map((playlist, idx) => {
+                                return <PlaylistCard idx={idx} data={playlist} hist={`random-song`} />
+                            })}
+                        </> :
+                        <>
+                            {playlists && playlists.items.map((playlist, idx) => {
+                                return <PlaylistCard idx={idx} data={playlist} hist={`convert-playlist`} />
+                            })}
+                        </>
+
+                }
+
+
+                {
+                    (playlists.items.length > 0) && !loading && (playlists.items.length < (playlists.total)) &&
+                    <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 50)} skeletonComponent={<SkeletonPlaylist />} />
+                }
+
+                {playlists.items.length < (playlists.total) &&
                     <>
-                        <h1 className='pageTitle__h1'>Select a playlist to get a random track</h1>
-                        <BackButton path="/" />
-                        {library && <PlaylistCard idx={0} data={library} hist={`random-song`} />}
-                        {playlists && playlists.items.map((playlist, idx) => {
-                            return <PlaylistCard idx={idx} data={playlist} hist={`random-song`} />
-                        })}
-                    </> :
-                    <>
-                        <h1 className='pageTitle__h1'>Select a playlist to convert</h1>
-                        <BackButton path="/" />
-                        {playlists && playlists.items.map((playlist, idx) => {
-                            return <PlaylistCard idx={idx} data={playlist} hist={`convert-playlist`} />
-                        })}
+                        <SkeletonPlaylist />
                     </>
+                }
 
-            }
+                {playlists.items.length === 0 &&
+                    <>
+                        <SkeletonPlaylist />
+                        <SkeletonPlaylist />
+                        <SkeletonPlaylist />
+                        <SkeletonPlaylist />
+                    </>
+                }
+
+                <div className={`playlistsButtons__divWrapper`}>
+                    <ScrollButton />
+                    <RefreshButton refreshFunc={refreshPlaylists} />
+                </div>
 
 
-            {
-                (playlists.items.length > 0) && !loading && (playlists.items.length < (playlists.total)) &&
-                <InfiniteScroll fetchMore={() => getAllPlaylists(playlists.items.length, 50)} skeletonComponent={<SkeletonPlaylist />} />
-            }
-
-            {playlists.items.length < (playlists.total) &&
-                <>
-                    <SkeletonPlaylist />
-                </>
-            }
-
-            {playlists.items.length === 0 &&
-                <>
-                    <SkeletonPlaylist />
-                    <SkeletonPlaylist />
-                    <SkeletonPlaylist />
-                    <SkeletonPlaylist />
-                </>
-            }
-
-            <div className={`playlistsButtons__divWrapper`}>
-                <RefreshButton refreshFunc={refreshPlaylists} />
             </div>
+        </>
 
-
-        </div>
     )
 }
 

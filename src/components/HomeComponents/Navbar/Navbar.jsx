@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -11,22 +11,8 @@ const Navbar = () => {
         window.location = `${process.env.REACT_APP_DOMAIN}/auth/spotify`
     }
 
-    useEffect(() => {
-        let navbar = document.querySelector('.navbar')
-
-        document.onscroll = () => {
-            if (window.scrollY > 66) {
-                navbar.classList.add('purpleBackground')
-            } else {
-                navbar.classList.remove('purpleBackground')
-            }
-        }
-        return () => { }
-
-    }, [])
-
     return (
-        <div className="navbar navbar-dark box-shadow navbar-expand-lg fixed-top">
+        <div className="navbar navbar-dark box-shadow navbar-expand-lg fixed-top purpleBackground" id="navb">
             <div className="container d-flex justify-content-between">
                 <Link to="/" className="navbar-brand d-flex align-items-center">
                     <i className={`fab fa-spotify ${styles.spotifyIcon__i}`}></i>

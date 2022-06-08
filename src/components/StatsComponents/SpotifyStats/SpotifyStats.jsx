@@ -10,6 +10,7 @@ import { bindActionCreators } from "redux"
 import { actionCreators } from "../../../redux/actions/index"
 
 import styles from './SpotifyStats.module.css'
+import BackButton from '../../UI/BackButton/BackButton'
 
 const SpotifyStats = () => {
     const [timeRange, setTimeRange] = useState('short_term')
@@ -45,6 +46,7 @@ const SpotifyStats = () => {
 
     return (
         <>
+            <BackButton path="/" />
             <div className={`${styles.timeRangeButtons__divWrapper}`}>
                 <button className={`${styles.timeRangeButton}`} onClick={() => setTopType('artists')}>Top Artists</button>
                 |
@@ -65,11 +67,11 @@ const SpotifyStats = () => {
                         <TopListenedTracks timeRange={timeRange} tracks={tracks} />
                 }
 
+                <div className={`playlistsButtons__divWrapper`}>
+                    <RefreshButton refreshFunc={refreshStats} />
+                </div>
             </div>
 
-            <div className={`playlistsButtons__divWrapper`}>
-                <RefreshButton refreshFunc={refreshStats} />
-            </div>
 
         </>
 

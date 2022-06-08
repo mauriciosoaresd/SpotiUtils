@@ -11,6 +11,7 @@ import VideoLoadingStatic from '../VideoLoadingStatic/VideoLoadingStatic'
 import { addTracksToPlaylist, createTrackList, searchSong } from '../../../utils/youtube/youtube-utility'
 
 import styles from './VideoPlayer.module.css'
+import BackButton from '../BackButton/BackButton'
 
 const VideoPlayer = () => {
     const selectedPlaylist = useSelector((state) => state.user.selectedPlaylist);
@@ -53,7 +54,8 @@ const VideoPlayer = () => {
         }
     }, [])
 
-    return (
+    return (<>
+        <BackButton />
         <div className={`${styles.videoPlayer__divWrapper}`}>
 
             {
@@ -79,6 +81,7 @@ const VideoPlayer = () => {
             }
 
         </div>
+    </>
     )
 }
 

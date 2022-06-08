@@ -4,6 +4,7 @@ html,
 body,
 #root {
   margin: 0;
+  scroll-behavior: smooth;
   height: 100%;
 }
 
@@ -15,7 +16,6 @@ body {
 }
 
 .App {
-  min-height: 100%;
   background-color: black;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,7 @@ body {
   color: white;
   font-size: 1.3rem;
   transition: 0.3s ease-in-out;
+  width: 100vw !important;
 }
 
 
@@ -48,8 +49,7 @@ main {
   flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100% !important;
-  margin-top: 66px;
+  margin-top: 86px;
   margin-bottom: 15px;
 }
 
@@ -115,11 +115,6 @@ thead {
   border-bottom: solid 3px rgba(255, 255, 255, 0.274) !important;
 }
 
-/* .bottomButtons {
-  bottom: 50px;
-  position: fixed;
-} */
-
 .icon__i {
   text-align: center;
   background-color: white;
@@ -137,6 +132,7 @@ thead {
 }
 
 .conversionTrack__div {
+  word-break: break-word;
   display: flex;
   border-radius: 9px;
   padding: 10px 15px;
@@ -152,6 +148,7 @@ thead {
 
 .conversionTrack__div>*:not(.conversionTrack__imgWrapper),
 .conversionTable_divHeader>*:not(.conversionTrack__imgWrapper) {
+  text-align: center;
   flex-basis: 40%;
   padding-top: 17px;
 }
@@ -197,9 +194,11 @@ thead {
 
 
 .playlistsButtons__divWrapper {
+  max-width: 540px;
   position: sticky;
   bottom: 10px;
   display: flex;
+  gap: 30px;
   justify-content: center;
 }
 
@@ -217,7 +216,6 @@ thead {
   .icon__i {
     background-color: transparent;
     color: white;
-    /* cursor: pointer; */
   }
   .icon__i:hover {
     background-color: white;
@@ -226,10 +224,12 @@ thead {
     transition: transform .2s;
   }
   
-
+  .playlistsButtons__divWrapper {
+    justify-content: flex-end;
+  }
 
   .table {
-    width: 70% !important;
+    max-width: 540px;
   }
 
   .videoPlayer {

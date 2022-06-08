@@ -50,7 +50,6 @@ function App() {
           <Routes>
             {user.loggedIn ?
               <>
-                {/* trocar camelcase por hifen */}
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/" element={<CardsDiv />} />
                 <Route path="/convert-playlists" element={<PlaylistsPage page={"conversion"} />} />

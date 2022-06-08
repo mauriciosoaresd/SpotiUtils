@@ -20,7 +20,7 @@ const PlaylistCard = ({ data, hist }) => {
                                 <img
                                     src={data.id === 'library' ?
                                         `${require('../../../assets/images/likedSongsCover2.jpg')}`
-                                        : data.images[0].url} className="img-fluid rounded-start"
+                                        : data.images[0] ? data.images[0].url : ''} className="img-fluid rounded-start"
                                 />
                             </div>
                             <div className="col-md-8">
