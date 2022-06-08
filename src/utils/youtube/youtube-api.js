@@ -1,6 +1,3 @@
-const BASE_URL = 'https://youtube.googleapis.com/youtube'
-
-
 export async function searchVideo(trackStr) {
     return fetch(`${process.env.REACT_APP_DOMAIN}/searchVideo`, {
         method: 'POST',

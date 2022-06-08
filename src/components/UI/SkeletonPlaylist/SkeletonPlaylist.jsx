@@ -10,7 +10,7 @@ const SkeletonPlaylist = () => {
                     <div style={{height: '100%'}}>
 
                     <div className="skeletonImage__divWrapper img-fluid rounded-start">
-                    <img src={require('../../../assets/images/transparency640.png')}  class="img-fluid rounded-start" />
+                    <img src={require('../../../assets/images/transparency640.png')}  alt="Skeleton loading image" class="img-fluid rounded-start" />
                         </div>
                     </div>
                 </div>

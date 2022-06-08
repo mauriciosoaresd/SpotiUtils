@@ -1,8 +1,7 @@
-const youtubesearchapi=require('youtube-search-api');
+const youtubesearchapi= require('youtube-search-api');
 
 module.exports = {
-    searchVid,
-
+    searchVid
 }
 
 async function searchVid(titleStr) {

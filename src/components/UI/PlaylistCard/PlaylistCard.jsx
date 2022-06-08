@@ -18,6 +18,7 @@ const PlaylistCard = ({ data, hist }) => {
                         <div className="row g-0">
                             <div className="col-md-4">
                                 <img
+                                    alt='Playlist cover'
                                     src={data.id === 'library' ?
                                         `${require('../../../assets/images/likedSongsCover2.jpg')}`
                                         : data.images[0] ? data.images[0].url : ''} className="img-fluid rounded-start"

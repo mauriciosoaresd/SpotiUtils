@@ -7,11 +7,3 @@
     z-index: 1030;
     height: 35px;
 }
-
-
-@media (min-width: 768px) {
-    .backIcon__divWrapper {
-        text-align: center;
-        margin-right: 620px;
-    }
-} 

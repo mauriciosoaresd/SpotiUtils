@@ -10,7 +10,7 @@ const TopListenedArtists = ({ timeRange, artists }) => {
                 <div className="card" style={{ maxWidth: 540 + 'px' }}>
                     <div className="row g-0">
                         <div className="col-md-4">
-                            <img src={artist.images[0].url} className="img-fluid rounded-start" />
+                            <img src={artist.images[0].url} alt="Artist cover" className="img-fluid rounded-start" />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
