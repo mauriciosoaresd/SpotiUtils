@@ -92,6 +92,10 @@ td {
   height: 100% !important;
 }
 
+.skeletonImage__card {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
 .skeletonText {
   animation: skeleton-loading 1s linear infinite alternate;
   border-radius: 30px;

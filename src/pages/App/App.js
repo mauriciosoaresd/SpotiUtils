@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
@@ -24,7 +24,6 @@ import PlaylistsPage from '../PlaylistsPage/PlaylistsPage'
 // BOTTOM WHITE FIX 
 
 function App() {
-  const [ loading, setLoading ] = useState(true);
   const user = useSelector((state) => state.user);
   const dispatch = useDispatch();
   const { getMyProfile } = bindActionCreators(actionCreators, dispatch)
@@ -32,7 +31,6 @@ function App() {
 
   useEffect(() => {
     user.loggedIn && getMyProfile()
-    setTimeout(() => setLoading(false), 5000);
   }, [])
 
   return (
