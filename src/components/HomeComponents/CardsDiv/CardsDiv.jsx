@@ -7,13 +7,12 @@ import { Link } from 'react-router-dom'
 
 import styles from './CardsDiv.module.css'
 
-const CardsDiv = () => {
-    const [loading, setLoading] = useState(true);
+const CardsDiv = ({loading}) => {
     const user = useSelector((state) => state.user);
 
-    useEffect(() => {
-        setTimeout(() => setLoading(false), 1500);
-    }, [])
+    // useEffect(() => {
+    //     setTimeout(() => setLoading(false), 900);
+    // }, [])
 
     return (
         <div className={`${styles.card__divWrapper} text-light`}>

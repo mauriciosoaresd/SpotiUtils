@@ -1,70 +1,119 @@
-# Getting Started with Create React App
+<h1 align="center">
+<a href="https://spotiutils.herokuapp.com/">
+  <img style="border-radius: 40px; height: 140px"alt="SpotiUtils" title="SpotiUtils" src="./README/logo.png" />
+  </a>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <a href="https://spotiutils.herokuapp.com/">🔗 SpotiUtils</a>
+</h1>
 
-## Available Scripts
+<p align="center">🚀Website project to convert a Spotify to Youtube playlist</p>
 
-In the project directory, you can run:
+<p align="center">
+ <a href="#features">Features</a> •
+ <a href="#setup">Setup</a> • 
+ <a href="#built-with">Built With</a> • 
+ <a href="#author">Author</a>
+</p>
 
-### `npm start`
+<p align="center">
+    <img width="250" style="border-radius: 5px" height="450" src="./README/mobile.gif" alt="Intro">
+</p>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Features
 
-### `npm test`
+- [x] Login with Spotify
+- [x] Convert a Spotify playlist to Youtube
+- [x] Get a random song
+- [x] Check your Spotify Stats:
+    - Most listened artists
+    - Most listened tracks
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+These instructios will get you a copy of the project up and running on your local machine. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Create database
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Follow the instructions to get the mongodb connection link: [here](https://www.mongodb.com/docs/atlas/tutorial/deploy-free-tier-cluster/).
 
-### `npm run eject`
+#### Create and manage an Spotify APP
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Create an app to get the envoiroments variable: [here](https://developer.spotify.com/dashboard/)
+You have to set ```http://localhost:3001/auth/spotify/callback``` as redirect URL in the Spotify dashboard
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+#### Installing
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+ *If you already have the Node.js and npm installed, you can skip  the step below.*
+ 
 
-## Learn More
+**Installing Node.js and npm**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+To run the App, you'll need to have the Node.js and  npm installed on your machine, if you don't have Node.js and npm installed yet, you can follow the following steps to install both:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+ * Installing Node.js and npm on macOS and Windows environment: [here](https://nodejs.org/en/download/).
+ * Installing Node.js and npm on Ubuntu environment: [here](https://tecadmin.net/install-latest-nodejs-npm-on-ubuntu/).
 
-### Code Splitting
+ **Fill .env file with your variables**
+```
+DATABASE_URL=<mongodb connection link>
+DOMAIN=http://localhost:3001
+REACT_APP_DOMAIN=$DOMAIN
+SPOTIFY_CLIENT_ID=<spotify api client id>
+SPOTIFY_CLIENT_SECRET=<spotify api client secret>
+SPOTIFY_CALLBACK=/auth/spotify/callback
+SECRET=<generate a secret to hash user sessions>
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+#### Running the App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+**Cloning the repository**
+```
+$ git clone https://github.com/mauriciosoaresd/SpotiUtils && cd SpotiUtils
+```
 
-### Making a Progressive Web App
+**Installing project dependencies**
+```
+$ npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+After cloning the repository and enter on the directory, you just need to run the following commands:
 
-### Advanced Configuration
+**Building Project**
+```
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Running the Express Server**
+```
+$ node server.js
+```
 
-### Deployment
+You can access server by the port:3001 - <http://localhost:3001>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Built With
 
-### `npm run build` fails to minify
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
+- [MongoDB](https://www.mongodb.com/)
+- [PassportJS](https://www.passportjs.org/)
+- [Redux](https://redux.js.org/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Author
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/55855981?v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Maurício Domingues</b></sub>
+
+ [![Gmail badge](https://img.shields.io/badge/-mauriciosoaresd@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white&link=mailto:mauriciosoaresd@gmail.com)](mailto:mauriciosoaresd@gmail.com) [![Linkedin Badge](https://img.shields.io/badge/-Maurício-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mauriciosdomingues/)](https://www.linkedin.com/in/mauriciosdomingues/) 
+
+
+
+## License
+
+This project is under the license [MIT](./LICENSE).

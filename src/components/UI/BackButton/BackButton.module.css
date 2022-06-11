@@ -3,6 +3,7 @@
     position: sticky;
     margin-left: 10px;
     margin-bottom: 15px;
+    width: fit-content;
     top: 72px;
     z-index: 1030;
     height: 35px;
