@@ -21,6 +21,7 @@
     <img width="250" style="border-radius: 5px" height="450" src="./README/mobile.gif" alt="Intro">
 </p>
 
+*Read this in other languages: [Portuguese](README.pt.md)*
 
 #### Features
 
@@ -48,7 +49,7 @@ You have to set ```http://localhost:3001/auth/spotify/callback``` as redirect UR
 
 #### Installing
 
- *If you already have the Node.js and npm installed, you can skip  the step below.*
+ *If you already have the Node.js and npm installed, you can skip the step below.*
  
 
 **Installing Node.js and npm**
@@ -99,7 +100,7 @@ You can access server by the port:3001 - <http://localhost:3001>
 ### Built With
 
 - [Node.js](https://nodejs.org/en/)
-- [React](https://pt-br.reactjs.org/)
+- [React](https://reactjs.org/)
 - [Bootstrap](https://getbootstrap.com/)
 - [MongoDB](https://www.mongodb.com/)
 - [PassportJS](https://www.passportjs.org/)
