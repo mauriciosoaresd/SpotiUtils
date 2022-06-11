@@ -107,7 +107,7 @@ You can access server by the port:3001 - <http://localhost:3001>
 
 ### Author
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/55855981?v=4" width="100px;" alt=""/>
- <br />
+
  <sub><b>Maurício Domingues</b></sub>
 
  [![Gmail badge](https://img.shields.io/badge/-mauriciosoaresd@gmail.com-D14836?style=flat-square&logo=gmail&logoColor=white&link=mailto:mauriciosoaresd@gmail.com)](mailto:mauriciosoaresd@gmail.com) [![Linkedin Badge](https://img.shields.io/badge/-Maurício-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mauriciosdomingues/)](https://www.linkedin.com/in/mauriciosdomingues/) 
