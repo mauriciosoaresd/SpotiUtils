@@ -22,7 +22,7 @@
     <img width="250" style="border-radius: 5px" height="450" src="./README/mobile.gif" alt="Intro">
 </p>
 
-*Leia em outros idiomas: [English](README.md)
+*Leia em outros idiomas: [English](README.md)*
 
 #### Funcionalidades
 
