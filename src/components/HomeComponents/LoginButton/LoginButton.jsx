@@ -4,7 +4,7 @@ import styles from './LoginButton.module.css'
 
 const LoginButton = () => {
     const handleLogin = () => {
-        window.location = `${process.env.REACT_APP_DOMAIN}/auth/spotify`
+        window.location = `${process.env.NEXT_PUBLIC_DOMAIN}/auth/spotify`
 
     }
     return(
