@@ -9,6 +9,7 @@ passport.use(new SpotifyStrategy({
     callbackURL: process.env.SPOTIFY_CALLBACK
 },
     function (accessToken, refreshToken, expires_in, profile, done) {
+        console.log("chjego??")
         User.findOne({ Spotify_User_Id: profile.id }, function (err, user) {
             if (err) {
                 console.log('\x1b[31m', `Error trying to find user...\n${err}`)
