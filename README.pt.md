@@ -1,11 +1,11 @@
 <h1 align="center">
-<a href="https://spotiutils.herokuapp.com/">
+<a href="https://spotiutils.onrender.com/">
   <img style="border-radius: 40px; height: 140px"alt="SpotiUtils" title="SpotiUtils" src="./README/logo.png" />
   </a>
 </h1>
 
 <h1 align="center">
-    <a href="https://spotiutils.herokuapp.com/">🔗 SpotiUtils</a>
+    <a href="https://spotiutils.onrender.com/">🔗 SpotiUtils</a>
 </h1>
 
 
