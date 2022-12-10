@@ -36,7 +36,7 @@ app.use(express.static(path.join(__dirname,'build')));
 
 // Routes
 app.use('/', indexRouter);
-app.get('/index.html', function(req, res) {
+app.get('/*', function(req, res) {
     res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
